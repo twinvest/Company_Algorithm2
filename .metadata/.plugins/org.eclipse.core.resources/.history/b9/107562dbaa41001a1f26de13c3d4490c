@@ -1,0 +1,56 @@
+package com.ssafy.algo;
+
+import java.util.Scanner;
+
+public class Solution22 {
+	static int[][] dir = {
+			{0, 0}, //더미
+			{-1,0}, //위
+			{1,0},  //아래
+			{0,-1}, //왼쪽
+			{0,1},  //오른쪽
+	};	
+	static boolean inside(int y, int x, int N)
+	{
+		return (N > y && y>=0) && (N > x && x>=0);
+	}
+		
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		int testcase, ans;
+		testcase=scan.nextInt();
+		for(int t=1; t<=testcase; ++t)
+		{
+			int N, numOfjanglee;
+			N = scan.nextInt();
+			int[][] arr = new int[N][N];
+			
+			numOfjanglee = scan.nextInt();
+			for(int i=1; i<=numOfjanglee; ++i)
+			{
+				int y, x, nexty, nextx, jump;
+				y = scan.nextInt();
+				x = scan.nextInt();
+				jump = scan.nextInt();
+				for(int k =1; k<=3; ++k)
+				{
+					nexty = y + (dir[jump][0]*k);
+					nextx = x + (dir[jump][1]*k);
+					//여기지나가다가 애색히 이 위치에 있는지
+					if(arr[nexty][nextx] != 0)
+					{
+						
+					} 
+				}
+				y= nexty;
+				x= nextx;
+			}
+			
+			System.out.println("#"+t+" "+ans);
+		}
+		
+	}
+
+}

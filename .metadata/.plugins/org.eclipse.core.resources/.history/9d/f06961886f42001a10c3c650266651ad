@@ -1,0 +1,19 @@
+package day0129;
+
+public class Solution {
+
+	public static void main(String[] args) 
+	{
+
+
+	}
+	
+	public void back_tracking(int level)
+	{
+		if(level == N)
+		{
+			
+		}
+	}
+
+}

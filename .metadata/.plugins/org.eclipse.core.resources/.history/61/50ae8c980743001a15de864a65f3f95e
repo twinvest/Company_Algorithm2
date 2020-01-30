@@ -1,0 +1,18 @@
+package day0130;
+
+public class 재귀함수ㅋㅋ {
+	static int[] arr = {1,2,3};
+	public static void main(String[] args) {
+		recur(0);
+	}
+	
+	static void recur(int n, int sum) {
+		if( n == arr.length ) {
+			System.out.println(sum);
+			return;
+		}
+		sum += arr[n];
+		recur(n + 1, sum);
+		//System.out.println(arr[n]);
+	}
+}

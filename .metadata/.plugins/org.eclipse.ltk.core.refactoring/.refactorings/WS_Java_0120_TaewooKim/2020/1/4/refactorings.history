@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;yeji.java&apos; to &apos;GameTest.java&apos;&#x0D;&#x0A;- Original project: &apos;WS_Java_0120_TaewooKim&apos;&#x0D;&#x0A;- Original element: &apos;yeji.java&apos;&#x0D;&#x0A;- Renamed element: &apos;GameTest.java&apos;" description="Rename compilation unit &apos;yeji.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{yeji.java" name="GameTest.java" references="false" stamp="1579509182022" version="1.0"/>
+</session>

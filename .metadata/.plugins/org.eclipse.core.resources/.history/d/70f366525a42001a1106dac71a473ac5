@@ -1,0 +1,59 @@
+package day04;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class 총잡이2 {
+	static int[][] dir = { 
+			
+			{ 0, 1 }, // 오른쪽
+			{ 0, -1 }, // 왼쪽
+			{ 1, 0 }, // 아래
+			{ -1, 0 }, // 위
+			
+	};
+
+	static boolean inside(int y, int x, int N) {
+		return (y >= 0 && y < N) && (x >= 0 && x < N);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		int testcase = scan.nextInt();
+		ArrayList<Position> list = new ArrayList<>();
+		for (int t = 1; t <= testcase; ++t) {
+			int ans = 0;
+			int Y = scan.nextInt();
+			int X = scan.nextInt();
+			String[][] arr = new String[Y][X];
+			boolean[][] flag = new boolean[Y][X];
+
+			for (int i = 0; i < Y; ++i)
+				for (int j = 0; j < X; ++j)
+					arr[i][j] = scan.next();
+
+			for (int i = 0; i < Y; ++i)
+				for (int j = 0; j < X; ++j)
+					if (arr[i][j].equals("G"))
+						list.add(new Position(i, j));
+
+			// 총잡이의 개수만큼 시행될 for문
+			for (int k = 0; k < list.size(); ++k) {
+				int y = list.get(k).y;
+				int x = list.get(k).x;
+					for(k=0; k<4; ++k)
+					{
+						for(int j=1; j<20; j++)
+						{
+							y = y + dir[k][0]*j;
+							x = x + dir[k][1]*j;
+						}
+						
+					}	
+				
+				
+			}
+		}
+	}
+}

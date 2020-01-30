@@ -1,0 +1,23 @@
+package com.ssafy.algo;
+
+import java.util.Scanner;
+
+public class Solution22 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		int testcase;
+		testcase=scan.nextInt();
+		for(int t=1 t<=testcase; ++t)
+		{
+			
+			
+			
+			
+			System.out.println("#"+t+" "+ans);
+		}
+		
+	}
+
+}

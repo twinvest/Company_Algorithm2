@@ -1,0 +1,22 @@
+package day0130;
+
+public class 비트마스킹부분집합 {
+	public static void main(String[] args) {
+		String[] arr = {"A","B","C"};
+		
+		int max = 0;
+		//i를 부분집합의 경우의수인 8가지 만큼 돌게 만들고, 각 숫자를 부분집합의 상태에 매칭 예를들면 1은 {A}, 3은 {A,B}
+		for(int i = 0; i < (1 << arr.length); i++) {
+			int sum = 0;
+			//현 상태에서 각 원소들이 포함되는지 검사
+			for(int j = 0; j < arr.length; j++) {
+				if( ( i & ( 1 << j ) ) != 0 )
+					System.out.print(arr[j]);
+					//sum += arr[j];
+			}
+			System.out.println();
+			max = Math.max(max, sum);
+		}
+		//System.out.println(max);
+	}
+}

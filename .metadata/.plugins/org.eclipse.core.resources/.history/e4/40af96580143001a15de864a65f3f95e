@@ -1,0 +1,29 @@
+package day0130;
+
+import java.util.Scanner;
+
+public class 햄버거 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int testcase = scan.nextInt();
+		
+		for(int t=1; t<=testcase; ++t)
+		{
+			int[] arr;  //재료의 맛
+			int[] arr2;  //얘가 재료의 칼로리
+			int max = 0;
+			int N = scan.nextInt();
+			
+			
+			arr = new int[N];
+			
+			
+			
+			
+			
+			
+			System.out.println("#"+t+" "+ans);
+		}
+		
+	}
+}

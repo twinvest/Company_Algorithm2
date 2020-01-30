@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;보물지도.java&apos; to &apos;HW_Java_0128/src/com.ssafy.algo&apos;&#x0D;&#x0A;- Original project: &apos;WS_Java_0128_김태우&apos;&#x0D;&#x0A;- Destination element: &apos;HW_Java_0128/src/com.ssafy.algo&apos;&#x0D;&#x0A;- Original element: &apos;com.ssafy.algo.보물지도.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=HW_Java_0128/src&lt;com.ssafy.algo" element1="/src&lt;com.ssafy.algo{보물지도.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1580208715813" units="1" version="1.0"/>
+</session>

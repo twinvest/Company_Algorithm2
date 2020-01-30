@@ -1,0 +1,46 @@
+package com.ssafy.algo;
+
+import java.util.Scanner;
+
+public class Solution22 {
+	static int[][] dir = {
+			{0, 0}, //더미
+			{-1,0}, //위
+			{1,0},  //아래
+			{0,-1}, //왼쪽
+			{0,1},  //오른쪽
+	};	
+	static boolean inside(int y, int x, int N)
+	{
+		return (N > y && y>=0) && (N > x && x>=0);
+	}
+		
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		int testcase, ans;
+		testcase=scan.nextInt();
+		for(int t=1; t<=testcase; ++t)
+		{
+			int N, numOfjanglee;
+			N = scan.nextInt();
+			int[][] arr = new int[N][N];
+			
+			numOfjanglee = scan.nextInt();
+			for(int i=1; i<=numOfjanglee; ++i)
+			{
+				int y, x, nexty, nextx, jump;
+				y = scan.nextInt();
+				x = scan.nextInt();
+				nexty = y + dir[][0];
+				nextx = x + dir[][1];
+				
+			}
+			
+			System.out.println("#"+t+" "+ans);
+		}
+		
+	}
+
+}

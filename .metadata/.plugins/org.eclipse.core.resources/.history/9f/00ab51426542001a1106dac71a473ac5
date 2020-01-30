@@ -1,0 +1,49 @@
+package day04;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class 미로도착지점 {
+	static int[][] dir = { { 0, 1 }, // 오른쪽
+			{ 0, -1 }, // 왼쪽
+			{ 1, 0 }, // 아래
+			{ -1, 0 }, // 위
+	};
+
+	static boolean inside(int y, int x, int N) {
+		return (y >= 0 && y < N) && (x >= 0 && x < N);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		int testcase = scan.nextInt();
+		
+		ArrayList<Position> list = new ArrayList<>();
+		for (int t = 1; t <= testcase; ++t) 
+		{
+			int N=scan.nextInt(); //배열크기
+			int[][] arr = new int[N][N];
+			int y = scan.nextInt(); //y좌표
+			int x = scan.nextInt(); //x좌표
+			--y; --x;
+			int numOfjumper = scan.nextInt(); //점퍼의 개수
+			
+			//점퍼 위치 받기
+			for(int k=0; k<numOfjumper; ++k)
+			{
+				int i = scan.nextInt();
+				int j = scan.nextInt();
+				--i; --j;
+				arr[i][j] = -1;
+			}
+			//이동지시 개수
+			int numOfdirect = scan.nextInt();
+			for(int i =0; i<numOfdirect; ++i)
+			{
+				
+			}
+			
+		}
+	}
+}

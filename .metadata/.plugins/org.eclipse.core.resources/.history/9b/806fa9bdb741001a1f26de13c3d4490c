@@ -1,0 +1,114 @@
+package com.ssafy.algo;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+class Position
+{
+	int x;
+	int y;
+	int value;
+	Position(int y, int x, int value)
+	{
+		this.y = y;
+		this.x = x;
+		this.value = value;
+	}
+}
+
+
+public class Solution13 {
+	static int[][] dir = {
+			{0,1},  //오른쪽
+			{0,-1}, //왼쪽
+			{1,0},  //아래
+			{-1,0}, //위
+			{-1,-1},//11시
+			{-1,1}, //1시
+			{1,-1}, //7시
+			{1,1}  //5시
+			};
+	
+	static boolean inside(int y, int x, int N)
+	{
+		return (y>=0 && y<N) && (x>=0 && x<N); 
+	}
+	
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int N, testcase;
+		testcase = scan.nextInt();
+		
+		for(int t=1; t<=testcase; ++t)
+		{
+			ArrayList<Position> list = new ArrayList<Position>();
+			ArrayList<Integer> list2 = new ArrayList<Integer>();
+			
+			N = scan.nextInt();
+			String[][] arr = new String[N][N];
+			
+			//입력
+			for(int i = 0; i<N; ++i)
+				for(int j=0; j<N; ++j)
+					arr[i][j] = scan.next();
+			
+			for(int i=0; i<N; ++i)
+			{
+				for(int j=0; j<N; ++j)
+				{
+					if(arr[i][j].equals("G"))
+						continue;
+					int count = 0;
+					for(int k = 0; k<8; ++k)
+					{	
+						int nexty = i + dir[k][0];
+						int nextx = j + dir[k][1];
+						if(inside(nexty, nextx, N) && arr[nexty][nextx].equals("B"))
+							count++;
+					}
+					list.add(new Position(i, j, count));
+					
+					boolean flag= false;
+					int ans = 0;
+					for(int k=0; k<N; ++k)
+					{
+						if(arr[i][k].equals("B")) 
+						{
+							flag= true;
+							++ans;
+						}
+						else if(flag && arr[i][k].equals("G")) 
+						{
+							break;
+						}
+					}
+					
+					flag= false;
+					for(int k=0; k<N; ++k)
+					{
+						if(arr[k][j].equals("B")) 
+						{
+							flag= true;
+							++ans;
+						}
+						else if(flag && arr[k][j].equals("G")) 
+						{
+							break;
+						}
+					}
+					list2.add(ans-1);
+				}
+			}
+			
+			
+			for(int i : list2)
+			{
+				System.out.print(i);
+			}
+		}
+		
+		
+		
+	}
+
+}

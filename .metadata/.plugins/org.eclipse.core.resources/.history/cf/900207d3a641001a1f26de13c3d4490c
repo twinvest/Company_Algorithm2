@@ -1,0 +1,62 @@
+package com.ssafy.algo;
+
+import java.util.Scanner;
+
+
+
+public class 보물지도 {
+	static int[][] dir = {
+			{0, 0}, //더미
+			{-1,0}, //위
+			{-1,1}, //1시
+			{0,1},  //오른쪽
+			{1,1},  //5시
+			{1,0},  //아래
+			{1,-1}, //7시
+			{0,-1}, //왼쪽
+			{-1,-1},//11시
+	};
+	
+	
+	static boolean inside(int y, int x, int N)
+	{
+		return (N > y && y>=0) && (N > x && x>=0);
+	}
+		
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int N, i, j, P;
+		N = scan.nextInt();
+		i = scan.nextInt();
+		j= scan.nextInt();
+		P = scan.nextInt();
+		
+		int[][] arr = new int[N][N];
+		
+		for(int k = 0; k<P; ++k)
+		{
+			int y,x;
+			y=scan.nextInt();
+			x=scan.nextInt();
+			--y; --x;
+			arr[y][x] = -1;
+		}
+		
+		int numofDerect; //방향지시자의 수(5)
+		numofDerect = scan.nextInt();
+		for(int k = 0; k < numofDerect; ++k)
+		{
+			int Direction;
+			int jump;
+			Direction = scan.nextInt();
+			jump = scan.nextInt();
+			
+			int ny = i + dir[Direction][0];
+			int nx = x + dir[Direction][1];
+			
+		}
+		
+		
+	}
+
+}

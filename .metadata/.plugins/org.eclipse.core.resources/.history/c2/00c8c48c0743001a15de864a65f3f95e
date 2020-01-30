@@ -1,0 +1,16 @@
+package day0130;
+
+public class 재귀함수ㅋㅋ {
+	static int[] arr = {1,2,3};
+	public static void main(String[] args) {
+		recur(0);
+	}
+	static void recur(int n) {
+		if( n == arr.length ) {
+			//여기서 배열의 총합을 출력
+			return;
+		}
+		recur(n + 1);
+		System.out.println(arr[n]);
+	}
+}

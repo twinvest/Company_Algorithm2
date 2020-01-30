@@ -1,0 +1,31 @@
+package day04;
+
+import java.util.Scanner;
+
+public class 총잡이 {
+	static int[][] dir = {
+			{0,1},  //오른쪽
+			{0,-1}, //왼쪽
+			{1,0},  //아래
+			{-1,0}, //위
+			};
+
+	static boolean inside(int y, int x, int N)
+	{
+		return (y>=0 && y<N) && (x>=0 && x<N); 
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		int testcase =scan.nextInt();
+		int ans = 0;
+		for(int t=1; t<=testcase; ++t)
+		{
+			
+			
+			System.out.println("#"+t+" "+ans);
+		}
+	}
+
+}

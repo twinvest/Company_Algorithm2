@@ -1,0 +1,29 @@
+package com.ssafy.algo;
+
+import java.util.Scanner;
+
+public class 보물지도 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int N, i, j, P;
+		N = scan.nextInt();
+		i = scan.nextInt();
+		j= scan.nextInt();
+		P = scan.nextInt();
+		
+		int[][] arr = new int[N][N];
+		
+		for(int k = 0; k<P; ++k)
+		{
+			int y,x;
+			y=scan.nextInt();
+			x=scan.nextInt();
+			
+		}
+		
+		
+
+	}
+
+}

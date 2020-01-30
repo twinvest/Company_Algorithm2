@@ -1,0 +1,17 @@
+package day03;
+
+import java.util.Scanner;
+
+public class InputTest {
+	//scanner 이용
+	//숫자 : nextInt();
+	//문자 : next();
+	//위 두개는 공백문자 전까지 읽음
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner scan = new Scanner(System.in);
+		
+	}
+
+}

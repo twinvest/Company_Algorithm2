@@ -1,0 +1,33 @@
+package day0129;
+
+public class Solution {
+	int N;
+	int[] col;
+	public static void main(String[] args) 
+	{
+
+
+	}
+	
+	public void back_tracking(int level)
+	{
+		if(level == N)
+		{
+			for(int i=0; i<N; ++i)
+				System.out.println(col[i]);
+			System.out.println("");
+		}
+		else
+		{
+			for(int i =0; i<N; ++i)
+			{
+				cols[level] = i;
+				if(isPossible(level))
+				{
+					
+				}
+			}
+		}
+	}
+
+}
